@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script> <![endif]-->
+		<link rel="stylesheet" href="project.css">
+		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
+		<meta charset="utf-8">
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		
+		
+		<title>Contact Us</title>
+	</head>
+	<body>
+		<header> 
+		</header>
+			<div id="wrapper">
+				<nav>
+					<ul>
+						<li><a href="Home.html">Home</a></li>
+						<li><a href="About.html">About Us</a></li>
+						<li><a href="Contact.html">Contact Us</a></li>
+						<li><a href="Resources.html">Resources</a></li>
+						<li><a href="Multimedia.html">Multimedia</a></li>
+						<li><a href="Missions.html">Missions</a></li>
+					</ul>
+				</nav>
+				<div id="page">
+					<div id="map" style="width:720px;height:227px"></div>
+					
+					<script>
+					function myMap() {
+						var myCenter = new google.maps.LatLng(34.334414, -83.803015);
+						var mapCanvas = document.getElementById("map");
+						var mapOptions = {center: myCenter, zoom: 9};
+						var map = new google.maps.Map(mapCanvas, mapOptions);
+						var marker = new google.maps.Marker({position: myCenter});
+						marker.setMap(map);
+						var infowindow = new google.maps.InfoWindow({content: "1104 Pine Valley Road, Gainesville, GA, United States"});
+							infowindow.open(map,marker);}
+					
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv-h9xaONHiWR10qtPABOBOhz4ZbP-1FI&callback=myMap">
+					</script><br><br>
+					<form action="/my-handling-form-page" method="post">
+						<div>
+							<label for="name">Name:<span style="color:red">*<span></label>
+							<input type="text" id="name" name="user-name">
+						</div>
+						<div>
+							<label for="mail">E-mail:<span style="color:red">*<span></label>
+							<input type="email" id="mail" name="user_mail">
+						</div>
+						<div>
+							<label for="subject">Subject<span style="color:red">*<span>:</label>
+							<input type="text" id="subject" name="subject1">
+						</div>
+						<div>
+							<label for="msg">Message:<span style="color:red">*<span></label>
+							<textarea id="msg" name="user_message"></textarea>
+						</div>
+						<div class="button">
+							<button type="submit">Send your message</button>
+						</div>
+					</form>
+					<div id="directions"><strong>Glory Baptist Church</strong><br>
+						1104 Pine Valley Road, Gainesville, GA 30501<br>
+						770.634.9388<br>
+						info@glorybaptist.net<br>
+					</div>
+				
+				</div>
+			</div>
+		<footer>Glory Baptist Church © Copyright. All Rights Reserved.</footer>
+	</body>
+</html>
